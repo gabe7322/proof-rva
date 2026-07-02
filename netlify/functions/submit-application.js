@@ -39,6 +39,8 @@ export default async function handler(req) {
   )
 
   if (!airtableRes.ok) {
+    const airtableError = await airtableRes.json().catch(() => ({}))
+    console.error('Airtable error:', JSON.stringify(airtableError))
     return new Response(JSON.stringify({ error: 'Failed to save application' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },

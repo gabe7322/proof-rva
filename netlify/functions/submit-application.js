@@ -12,6 +12,8 @@ export default async function handler(req) {
     })
   }
 
+  console.log('BASE_ID:', process.env.AIRTABLE_BASE_ID)
+  console.log('KEY set:', !!process.env.AIRTABLE_API_KEY)
   const airtableRes = await fetch(
     `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Applications`,
     {

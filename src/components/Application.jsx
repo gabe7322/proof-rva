@@ -195,7 +195,7 @@ export default function Application() {
                 {/* STEP 2 */}
                 {step === 2 && (
                   <>
-                    <p className="text-xs tracking-widests uppercase text-proof-faint mb-2">Step 2 of 4 — Your Work</p>
+                    <p className="text-xs tracking-widest uppercase text-proof-faint mb-2">Step 2 of 4 — Your Work</p>
                     <Field label="Link to or describe the work you're most proud of right now" id="proudWork" required>
                       <textarea id="proudWork" className={`${inputClass} min-h-[80px] py-2`} value={form.proudWork} onChange={set('proudWork')} />
                       {errors.proudWork && <span className="text-proof-accent text-xs">{errors.proudWork}</span>}

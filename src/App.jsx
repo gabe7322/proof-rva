@@ -1,3 +1,10 @@
+import Hero from './components/Hero'
+import './index.css'
+
 export default function App() {
-  return <div className="bg-proof-bg min-h-screen" />
+  return (
+    <main className="bg-proof-bg">
+      <Hero />
+    </main>
+  )
 }

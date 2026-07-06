@@ -9,7 +9,7 @@ const fadeUp = (delay) => ({
 })
 
 export default function Hero() {
-  const { eyebrow, headline, sub, cta } = COPY.hero
+  const { eyebrow, headline, headlineSub, sub, cta } = COPY.hero
   const prefersReduced = useReducedMotion()
 
   return (
@@ -41,11 +41,30 @@ export default function Hero() {
           style={{ fontSize: 'clamp(3rem, 9vw, 7rem)' }}
         >
           {headline.map((line, i) => (
-            <motion.span key={i} className="block" {...fadeUp(0.15 + i * 0.08)}>
-              {line}
-            </motion.span>
+            <span key={i} className="block overflow-hidden">
+              <motion.span
+                className="block"
+                initial={{ y: '110%', skewY: 4 }}
+                animate={{ y: '0%', skewY: 0 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 + i * 0.1 }}
+              >
+                {line}
+              </motion.span>
+            </span>
           ))}
         </h1>
+
+        <span className="block overflow-hidden mb-5">
+          <motion.span
+            className="block font-display font-semibold normal-case tracking-tight text-proof-mute"
+            style={{ fontSize: 'clamp(1.25rem, 3.5vw, 2.25rem)' }}
+            initial={{ y: '110%' }}
+            animate={{ y: '0%' }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 + headline.length * 0.1 }}
+          >
+            {headlineSub}
+          </motion.span>
+        </span>
 
         <motion.p
           className="text-proof-mute italic mb-10"
@@ -57,9 +76,13 @@ export default function Hero() {
 
         <motion.a
           href="#apply"
-          className="inline-flex items-center gap-2 bg-proof-accent text-proof-text font-bold uppercase tracking-widest text-xs px-7 py-4 rounded-sm hover:opacity-90 transition-opacity"
+          className="relative inline-flex items-center gap-2 bg-proof-accent text-proof-text font-bold uppercase tracking-widest text-xs px-7 py-4 rounded-sm"
           {...fadeUp(0.45)}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{
+            scale: 1.02,
+            boxShadow: `0 0 0 1px ${TOKENS.accent}, 0 0 28px 4px ${TOKENS.accent}55`,
+            transition: { duration: 0.25, ease: 'easeOut' },
+          }}
           whileTap={{ scale: 0.98 }}
         >
           {cta}

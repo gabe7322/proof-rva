@@ -5,7 +5,7 @@ import useAirtable from '../hooks/useAirtable'
 import { COPY } from '../constants/copy'
 
 const EMPTY_FORM = {
-  name: '', email: '', workLink: '', discipline: '',
+  name: '', email: '', city: 'Richmond, VA', discipline: '',
   proudWork: '', futureWork: '',
   collaborators: '', project: '', excites: [],
   commitment: '', anythingElse: '',
@@ -13,7 +13,7 @@ const EMPTY_FORM = {
 }
 
 const STEP_REQUIRED = {
-  1: ['name', 'email', 'workLink', 'discipline'],
+  1: ['name', 'email', 'city', 'discipline'],
   2: ['proudWork', 'futureWork'],
   3: [],
   4: ['commitment'],
@@ -178,9 +178,9 @@ export default function Application() {
                         {errors.email && <span className="text-proof-accent text-xs">{errors.email}</span>}
                       </Field>
                     </div>
-                    <Field label="Instagram / primary work link" id="workLink" required>
-                      <input id="workLink" className={inputClass} value={form.workLink} onChange={set('workLink')} placeholder="https://" />
-                      {errors.workLink && <span className="text-proof-accent text-xs">{errors.workLink}</span>}
+                    <Field label="City" id="city" required>
+                      <input id="city" className={inputClass} value={form.city} onChange={set('city')} placeholder="Richmond, VA" />
+                      {errors.city && <span className="text-proof-accent text-xs">{errors.city}</span>}
                     </Field>
                     <Field label="Discipline" id="discipline" required>
                       <select id="discipline" className={inputClass} value={form.discipline} onChange={set('discipline')}>
@@ -212,15 +212,15 @@ export default function Application() {
                   <>
                     <p className="text-xs tracking-widest uppercase text-proof-faint mb-1">Step 3 of 4 — Getting to Know You</p>
                     <p className="text-proof-mute text-sm italic mb-2">{c.step3Intro}</p>
-                    <Field label="What kind of collaborators or creative people are you hoping to meet here?" id="collaborators">
+                    <Field label="What kind of people are you hoping to meet through something like this?" id="collaborators">
                       <textarea id="collaborators" className={`${inputClass} min-h-[72px] py-2`} value={form.collaborators} onChange={set('collaborators')} />
                       {errors.collaborators && <span className="text-proof-accent text-xs">{errors.collaborators}</span>}
                     </Field>
-                    <Field label="Is there a project or idea you've been wanting to start but haven't had the right people around you for?" id="project">
+                    <Field label="Is there a project or idea you've been sitting on but haven't had the right people around you to start?" id="project">
                       <textarea id="project" className={`${inputClass} min-h-[72px] py-2`} value={form.project} onChange={set('project')} />
                     </Field>
                     <div className="flex flex-col gap-1.5">
-                      <span className="text-xs text-proof-mute">What part of this excites you most?</span>
+                      <span className="text-xs text-proof-mute">What part of PROOF excites you most?</span>
                       <div className="flex flex-wrap gap-2 mt-1">
                         {c.excitesOptions.map((opt) => (
                           <button

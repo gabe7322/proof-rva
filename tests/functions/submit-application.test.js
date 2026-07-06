@@ -20,7 +20,7 @@ const airtableFailure = {
 const validBody = {
   name: 'Jordan Lee',
   email: 'jordan@example.com',
-  workLink: 'https://instagram.com/jordanlee',
+  city: 'Richmond, VA',
   discipline: 'DJ',
   proudWork: 'My debut EP',
   futureWork: 'A live audiovisual show',

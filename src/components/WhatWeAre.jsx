@@ -3,7 +3,7 @@ import ScrollReveal from './ScrollReveal'
 import { COPY } from '../constants/copy'
 
 export default function WhatWeAre() {
-  const { eyebrow, headline, body, tags } = COPY.whatWeAre
+  const { eyebrow, headline, paras, tags } = COPY.whatWeAre
 
   return (
     <section className="bg-proof-bg px-6 md:px-16 lg:px-24 py-24 md:py-32">
@@ -21,9 +21,13 @@ export default function WhatWeAre() {
           </h2>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.1}>
-          <p className="text-proof-mute leading-relaxed text-base md:text-lg mb-10">{body}</p>
-        </ScrollReveal>
+        <div className="flex flex-col gap-5 mb-10">
+          {paras.map((para, i) => (
+            <ScrollReveal key={i} delay={0.1 + i * 0.05}>
+              <p className="text-proof-mute leading-relaxed text-base md:text-lg">{para}</p>
+            </ScrollReveal>
+          ))}
+        </div>
 
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, i) => (

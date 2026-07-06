@@ -34,7 +34,6 @@ describe('Application form', () => {
     render(<Application />)
     await userEvent.type(screen.getByLabelText(/name/i), 'Jordan Lee')
     await userEvent.type(screen.getByLabelText(/email/i), 'jordan@example.com')
-    await userEvent.type(screen.getByLabelText(/instagram/i), 'https://instagram.com/j')
     await userEvent.selectOptions(screen.getByLabelText(/discipline/i), 'DJ')
     await userEvent.click(screen.getByText(/continue/i))
     await waitFor(() => expect(screen.getByText(/step 2 of 4/i)).toBeInTheDocument())

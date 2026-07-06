@@ -24,7 +24,7 @@ export default async function handler(req) {
         fields: {
           Name: body.name,
           Email: body.email,
-          'Work Link': body.workLink,
+          City: body.city,
           Discipline: body.discipline,
           'Proud Work': body.proudWork,
           'Future Work': body.futureWork,

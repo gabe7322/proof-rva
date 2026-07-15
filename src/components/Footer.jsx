@@ -26,7 +26,7 @@ export default function Footer() {
 
       <ScrollReveal delay={0.1}>
         <div className="flex items-center justify-between pt-6 border-t border-proof-border">
-          <Logo className="text-xl" />
+          <Logo className="h-16" />
           <p className="text-proof-faint text-xs tracking-widest uppercase">{tagline}</p>
           {/* Social links placeholder — add handles when available */}
         </div>

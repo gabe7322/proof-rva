@@ -1,6 +1,5 @@
 export const COPY = {
   hero: {
-    eyebrow: 'Charter Membership · Richmond, VA',
     headline: ["Richmond's creative voices.", 'On one platform.'],
     headlineSub: 'Built and run by the people on it.',
     sub: "PROOF is a member-owned media platform connecting Richmond's music and visual art community — through radio sessions, spotlights, events, and more.",
@@ -15,7 +14,7 @@ export const COPY = {
     eyebrow: 'What We Are',
     headline: 'A platform that belongs to the people it features.',
     paras: [
-      "PROOF is a creative media platform based in Richmond, Virginia. It connects the city's creative voices across music and visual art — documenting their work, promoting them to a real audience, and giving them a stage they actually own a piece of.",
+      "PROOF is a creative media platform based in RVA. It connects the city's creative voices across music and visual art — documenting their work, promoting them to a real audience, and giving them a stage they actually own a piece of.",
       "Most platforms feature creatives without giving them any say in how things are run. PROOF is different. The people on the platform are also the members who vote on its direction, shape its programming, and decide where it goes next. It is built for Richmond's makers, by Richmond's makers.",
     ],
     tags: ['Music Producers', 'DJs', 'Photographers', 'Videographers', 'Graphic Designers', 'Filmmakers', 'Visual Artists'],
@@ -47,21 +46,20 @@ export const COPY = {
     eyebrow: 'The Feeling',
     headline: 'You stop building alone.',
     lines: [
-      { text: "You get a platform that's actually working for you.", faded: false },
-      { text: 'You meet people in Richmond who are as serious about their craft as you are.', faded: false },
-      { text: 'You have a real vote in how something grows.', faded: false },
+      { text: "You get a platform that's actually working for you.", faded: true },
+      { text: 'You meet people in Richmond who are as serious about their craft as you are.', faded: true },
+      { text: 'You have a real vote in how something grows.', faded: true },
       { text: 'You become part of something that outlasts any one night, any one project, any one of us.', faded: false },
     ],
-    closing: "This is Richmond's creative community with structure behind it — and it's yours to shape.",
   },
 
   whatWeMake: {
-    eyebrow: 'What We Make',
-    headline: 'Real content. Real events. Real connections.',
+    eyebrow: 'What We Could Make',
+    headline: "Directions we're exploring — shaped by the members, not locked in yet.",
     blocks: [
       {
         label: 'PROOF FM',
-        text: 'A recurring radio-style session hosted by members. Each episode features a different voice from the community — a set, a conversation, a spotlight. Distributed publicly so the audience grows with every episode.',
+        text: "One idea on the table: a recurring radio-style session hosted by members, each episode featuring a different voice from the community — a set, a conversation, a spotlight. Whether and how this happens is something we'd build together.",
       },
       {
         label: 'Member Spotlights',
@@ -69,7 +67,7 @@ export const COPY = {
       },
       {
         label: 'PROOF Sessions',
-        text: 'Live events that bring the community together in person. Music, visual art, and the people who make both — in the same room, no pressure to perform, just an environment where things happen naturally.',
+        text: "A possible format for live events that bring the community together in person — music, visual art, and the people who make both, in the same room. This isn't a promise of what launches first; it's something charter members would shape and decide on together.",
       },
     ],
   },

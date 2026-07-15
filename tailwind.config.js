@@ -5,15 +5,15 @@ export default {
     extend: {
       colors: {
         proof: {
-          bg:        '#10141A',
-          'bg-alt':  '#141820',
-          'bg-surf': '#181D26',
-          text:      '#F0F2F5',
-          mute:      'rgba(240,242,245,0.55)',
-          faint:     'rgba(240,242,245,0.25)',
-          accent:    '#D63B3B',
-          border:    'rgba(240,242,245,0.07)',
-          'border-md': 'rgba(240,242,245,0.13)',
+          bg:        '#F7F2E7',
+          'bg-alt':  '#F0E9D8',
+          'bg-surf': '#EAE1CB',
+          text:      '#1A1510',
+          mute:      'rgba(26,21,16,0.6)',
+          faint:     'rgba(26,21,16,0.3)',
+          accent:    '#EF1A26',
+          border:    'rgba(26,21,16,0.09)',
+          'border-md': 'rgba(26,21,16,0.16)',
         },
       },
       fontFamily: {

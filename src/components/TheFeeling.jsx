@@ -28,14 +28,12 @@ function FeelingLine({ line }) {
 }
 
 export default function TheFeeling() {
-  const { eyebrow, headline, lines, closing } = COPY.theFeeling
+  const { eyebrow, headline, lines } = COPY.theFeeling
 
   return (
     <section className="bg-proof-bg-surf px-6 md:px-16 lg:px-24 py-28 md:py-40">
       <ScrollReveal>
-        <p className="text-xs tracking-eyebrow uppercase font-semibold text-proof-faint mb-6">
-          {eyebrow}
-        </p>
+        <p className="eyebrow mb-6">{eyebrow}</p>
       </ScrollReveal>
 
       <ScrollReveal delay={0.05}>
@@ -52,12 +50,6 @@ export default function TheFeeling() {
           <FeelingLine key={i} line={line} />
         ))}
       </div>
-
-      <ScrollReveal delay={0.1}>
-        <p className="text-proof-text font-bold leading-snug max-w-2xl" style={{ fontSize: 'clamp(1.25rem, 3vw, 1.625rem)' }}>
-          {closing}
-        </p>
-      </ScrollReveal>
     </section>
   )
 }

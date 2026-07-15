@@ -33,7 +33,7 @@ function ProgressBar({ step, total = 4 }) {
           <div
             className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 transition-colors duration-200 ${
               i + 1 === step
-                ? 'bg-proof-accent text-proof-text'
+                ? 'bg-proof-accent text-proof-bg'
                 : i + 1 < step
                 ? 'bg-proof-bg-surf border border-proof-border-md text-proof-faint'
                 : 'border border-proof-border text-proof-faint'
@@ -229,7 +229,7 @@ export default function Application() {
                             onClick={() => toggleExcites(opt)}
                             className={`text-xs font-semibold px-3 py-1.5 rounded-full border transition-colors ${
                               form.excites.includes(opt)
-                                ? 'bg-proof-accent border-proof-accent text-proof-text'
+                                ? 'bg-proof-accent border-proof-accent text-proof-bg'
                                 : 'border-proof-border-md text-proof-mute hover:border-proof-border-md'
                             }`}
                           >
@@ -289,7 +289,7 @@ export default function Application() {
                       <button
                         type="button"
                         onClick={advance}
-                        className="bg-proof-accent text-proof-text text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-sm hover:opacity-90 transition-opacity"
+                        className="bg-proof-accent text-proof-bg text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-sm hover:opacity-90 transition-opacity"
                       >
                         {c.continueLabel}
                       </button>
@@ -297,7 +297,7 @@ export default function Application() {
                       <button
                         type="submit"
                         disabled={status === 'loading'}
-                        className="bg-proof-accent text-proof-text text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-sm hover:opacity-90 transition-opacity disabled:opacity-50"
+                        className="bg-proof-accent text-proof-bg text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-sm hover:opacity-90 transition-opacity disabled:opacity-50"
                       >
                         {status === 'loading' ? 'Sending...' : c.submitLabel}
                       </button>

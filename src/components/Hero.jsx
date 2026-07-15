@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { COPY } from '../constants/copy'
 import { TOKENS } from '../constants/tokens'
+import Logo from './Logo'
 
 const fadeUp = (delay) => ({
   initial: { opacity: 0, y: 20 },
@@ -9,7 +10,7 @@ const fadeUp = (delay) => ({
 })
 
 export default function Hero() {
-  const { eyebrow, headline, headlineSub, sub, cta } = COPY.hero
+  const { headline, headlineSub, sub, cta } = COPY.hero
   const prefersReduced = useReducedMotion()
 
   return (
@@ -32,9 +33,9 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-4xl">
-        <motion.p className="eyebrow text-proof-faint mb-6" {...fadeUp(0)}>
-          {eyebrow}
-        </motion.p>
+        <motion.div {...fadeUp(0)} className="mb-8">
+          <Logo className="h-20 md:h-28" />
+        </motion.div>
 
         <h1
           className="font-display font-black uppercase leading-none tracking-tight text-proof-text mb-5"
@@ -56,7 +57,7 @@ export default function Hero() {
 
         <span className="block overflow-hidden mb-5">
           <motion.span
-            className="block font-display font-semibold normal-case tracking-tight text-proof-mute"
+            className="block font-display font-semibold normal-case tracking-tight text-proof-accent"
             style={{ fontSize: 'clamp(1.25rem, 3.5vw, 2.25rem)' }}
             initial={{ y: '110%' }}
             animate={{ y: '0%' }}
@@ -67,7 +68,7 @@ export default function Hero() {
         </span>
 
         <motion.p
-          className="text-proof-mute italic mb-10"
+          className="text-proof-accent italic mb-10"
           style={{ fontSize: 'clamp(1rem, 2.5vw, 1.375rem)' }}
           {...fadeUp(0.35)}
         >
@@ -76,7 +77,7 @@ export default function Hero() {
 
         <motion.a
           href="#apply"
-          className="relative inline-flex items-center gap-2 bg-proof-accent text-proof-text font-bold uppercase tracking-widest text-xs px-7 py-4 rounded-sm"
+          className="relative inline-flex items-center gap-2 bg-proof-accent text-proof-bg font-bold uppercase tracking-widest text-xs px-7 py-4 rounded-sm"
           {...fadeUp(0.45)}
           whileHover={{
             scale: 1.02,

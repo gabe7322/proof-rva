@@ -8,8 +8,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #10141A;
-  color: #F0F2F5;
+  background-color: #F7F2E7;
+  color: #1A1510;
   font-family: 'Inter', system-ui, sans-serif;
   margin: 0;
 }
@@ -20,5 +20,5 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 600;
-  color: #D63B3B;
+  color: #EF1A26;
 }
